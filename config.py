@@ -72,6 +72,7 @@ keys = [
     Key([mod], "e", lazy.spawn("thunar"), desc="File Explorer"),
     Key([mod], "o", lazy.spawn("obsidian"), desc="Notes"),
     Key([mod], "m", lazy.spawn("firefox")),
+    Key([mod], "v", lazy.spawn("code"), desc="VSCode"),
 ]
 
 # Add key bindings to switch VTs in Wayland.
@@ -115,15 +116,15 @@ for i in groups:
     )
 
 layouts = [
-    layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=1, margin=4),
+    layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=1, margin=15),
     layout.Max(),
     # layout.Stack(num_stacks=2),
     # layout.Bsp(),
-    layout.Matrix(columns=2, margin=4),
+    layout.Matrix(columns=2, margin=15),
     # layout.MonadTall(),
     # layout.MonadWide(),
     # layout.RatioTile(),
-    layout.Tile(margin=4),
+    layout.Tile(margin=15),
     # layout.TreeTab(),
     # layout.VerticalTile(),
     # layout.Zoomy(),
@@ -131,8 +132,8 @@ layouts = [
 
 widget_defaults = dict(
     font="Hack Nerd Font",
-    fontsize=12,
-    padding=3,
+    fontsize=11,
+    padding=4,
 )
 extension_defaults = widget_defaults.copy()
 
@@ -154,23 +155,39 @@ screens = [
                 # widget.StatusNotifier(),
                 widget.Systray(),
                 widget.TextBox(
-                    foreground="#FF4301",
+                    foreground="#b58900",
                     text="",
                     fontsize=66,
                     padding=-2,
                 ),
-                widget.Clock(format="%Y-%m-%d %a %I:%M %p", background="#FF4301"),
+                widget.Memory(background="#b58900"),
                 widget.TextBox(
-                    background="#FF4301",
-                    foreground="#021526",
+                    background="#b58900",
+                    foreground="#cb4b16",
                     text="",
                     fontsize=66,
                     padding=-2,
                 ),
-                widget.QuickExit(background="#021526"),
+                widget.CheckUpdates(no_update_string='No updates', background="#cb4b16"),
+                widget.TextBox(
+                    background="#cb4b16",
+                    foreground="#268bd2",
+                    text="",
+                    fontsize=66,
+                    padding=-2,
+                ),
+                widget.Clock(format="%Y-%m-%d %a %I:%M %p", background="#268bd2"),
+                widget.TextBox(
+                    background="#268bd2",
+                    foreground="#859900",
+                    text="",
+                    fontsize=66,
+                    padding=-2,
+                ),
+                widget.QuickExit(background="#859900"),
             ],
-            24,
-            background="#021526",
+            18,
+            background="#001014",
             # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
             # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
         ),
