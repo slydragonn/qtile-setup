@@ -168,7 +168,7 @@ screens = [
                     fontsize=66,
                     padding=-2,
                 ),
-                widget.CheckUpdates(no_update_string='No updates', background="#2aa198"),
+                widget.Net(format="{down:.0f}{down_suffix} ↓↑ {up:.0f}{up_suffix}", background="#2aa198"),
                 widget.TextBox(
                     background="#2aa198",
                     foreground="#268bd2",
