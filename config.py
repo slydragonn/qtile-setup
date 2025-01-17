@@ -73,6 +73,8 @@ keys = [
     Key([mod], "o", lazy.spawn("obsidian"), desc="Notes"),
     Key([mod], "m", lazy.spawn("firefox")),
     Key([mod], "v", lazy.spawn("code"), desc="VSCode"),
+    Key([], "Print", lazy.spawn("flameshot gui"), desc="Screen capture"),
+    Key([mod], "p", lazy.spawn("obs"), desc="OBS Studio")
 ]
 
 # Add key bindings to switch VTs in Wayland.
