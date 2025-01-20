@@ -69,7 +69,7 @@ keys = [
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
     Key([mod], "b", lazy.spawn("google-chrome-stable"), desc="Browser"),
-    Key([mod], "e", lazy.spawn("thunar"), desc="File Explorer"),
+    Key([mod], "e", lazy.spawn("dolphin"), desc="File Explorer"),
     Key([mod], "o", lazy.spawn("obsidian"), desc="Notes"),
     Key([mod], "m", lazy.spawn("firefox")),
     Key([mod], "v", lazy.spawn("code"), desc="VSCode"),
